@@ -1,0 +1,38 @@
+<?php
+// Data cadangan: dipakai kalau database belum diimpor / tidak bisa dihubungi.
+// Kategori telah diseragamkan. Data utama website bisa berasal dari database MySQL.
+return [
+    ['nama' => 'Nasi Ayam Goreng',          'harga' => 20000, 'kategori' => 'makanan',    'gambar' => 'nasi-ayam-goreng.jpg', 'favorit' => 1, 'di_menu' => 0],
+    ['nama' => 'Ice Chocolate',             'harga' => 16000, 'kategori' => 'non-coffee', 'gambar' => 'Chocolate.png',    'favorit' => 1, 'di_menu' => 0],
+    ['nama' => 'Greentea',                  'harga' => 16000, 'kategori' => 'non-coffee', 'gambar' => 'Greentea.png',         'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Cream & Cookies',           'harga' => 16000, 'kategori' => 'non-coffee', 'gambar' => 'Cream Cookies.png',    'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Calamansy',                 'harga' => 15000, 'kategori' => 'non-coffee', 'gambar' => 'Calamansy.png',        'favorit' => 0, 'di_menu' => 2],
+    ['nama' => 'Americano',                 'harga' => 15000, 'kategori' => 'coffee',      'gambar' => 'Americano.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'ButterScotch',              'harga' => 17000, 'kategori' => 'coffee',      'gambar' => 'ButterScotch.png',    'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Cappucino',                'harga' => 17000, 'kategori' => 'coffee',      'gambar' => 'Cappucino.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'OceanBlue',                'harga' => 15000, 'kategori' => 'non-coffee', 'gambar' => 'OceanBlue.jpeg',       'favorit' => 1, 'di_menu' => 1],
+    ['nama' => 'MontBlanc',                 'harga' => 19000, 'kategori' => 'coffee',      'gambar' => 'MontBlanc.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Caramel Coffe',              'harga' => 17000, 'kategori' =>'coffee',      'gambar' => 'Caramel Coffe.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Taro Milk',              'harga' => 16000, 'kategori' =>'non-coffee',      'gambar' => 'Taro Milk.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Red velvet',              'harga' => 16000, 'kategori' =>'non-coffee',      'gambar' => 'Red velvet.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Lemon Tea',              'harga' => 12000, 'kategori' => 'non-coffee',      'gambar' => 'lemon tea.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Teh Tarik',              'harga' => 16000, 'kategori' => 'non-coffee',      'gambar' => 'teh tarik.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Orange Squash',              'harga' => 15000, 'kategori' => 'non-coffee',      'gambar' => 'orange squash.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Lemon Squash',              'harga' => 15000, 'kategori' => 'non-coffee',      'gambar' => 'lemon squash.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Matcha ',              'harga' => 17000, 'kategori' => 'non-coffee',      'gambar' => 'Matcha.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Mie Jebew',              'harga' => 15000, 'kategori' => 'makanan',      'gambar' => 'mie jebew.png',       'favorit' => 1, 'di_menu' => 1],
+    ['nama' => 'Mie Ayam Cozy',              'harga' => 18000, 'kategori' => 'makanan',      'gambar' => 'mie ayam.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Mie Kuah + Telur',              'harga' => 15000, 'kategori' => 'makanan',      'gambar' => 'mie kuah.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Nasi Goreng Spesial',              'harga' => 18000, 'kategori' => 'makanan',      'gambar' => 'nasi goreng spesial.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Nasi Goreng Cumi',              'harga' => 21000, 'kategori' => 'makanan',      'gambar' => 'nasi goreng cumi.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'kentang Goreng',              'harga' => 15000, 'kategori' => 'snack',      'gambar' => 'kentang goreng.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Bakso Goreng',              'harga' => 15000, 'kategori' => 'snack',      'gambar' => 'bakso goreng.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Vanilla Coffe',              'harga' => 17000, 'kategori' => 'coffee',      'gambar' => 'Vanilla Coffe.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Cheese Cake Lotus',              'harga' => 28000, 'kategori' => 'snack',      'gambar' => 'cheesecake lotus.png',       'favorit' => 1, 'di_menu' => 1],
+    ['nama' => 'Roti Bakar',              'harga' => 15000, 'kategori' => 'snack',      'gambar' => 'roti bakar.png',       'favorit' => 0, 'di_menu' => 1],
+    ['nama' => 'Cheese Cake Coklat Milo',              'harga' => 28000, 'kategori' => 'snack',      'gambar' => 'cheesecake coklat milo.png',       'favorit' => 1, 'di_menu' => 1],
+    ['nama' => 'Cheese Cake Milo',              'harga' => 28000, 'kategori' => 'snack',      'gambar' => 'cheesecake milo.png',       'favorit' => 1, 'di_menu' => 1],
+    ['nama' => 'Cheese Cake Cookies &',              'harga' => 28000, 'kategori' => 'snack',      'gambar' => 'cheesecake cookies&cream.png',       'favorit' => 1, 'di_menu' => 1],
+    ['nama' => 'Aren Coffe',            'harga' => 15000, 'kategori' => 'coffee',     'gambar' => 'aren coffe.png',  'favorit' => 0, 'di_menu' => 1],
+
+    ];

@@ -1,0 +1,440 @@
+/* ===== CozyHouse — style.css ===== */
+:root {
+  /* Warna diambil langsung dari desain PDF */
+  --cream: #fefaf2;
+  --sand: #f7efde;
+  --maroon: #5d121a;
+  --maroon-dark: #44090f;
+  --ink: #38261f;
+  --muted: #7a6657;
+  --line: #eadfc8;
+  --tint: #f7efde;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 3px;
+}
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  color: var(--maroon);
+  line-height: 1.2;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--cream);
+  border-bottom: 2px solid var(--maroon);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 14px;
+}
+.logo {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--maroon);
+  line-height: 0.9;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin: 0 auto;
+}
+.nav-links a {
+  padding-block: 4px;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--maroon);
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+  color: var(--maroon);
+  cursor: pointer;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  background: var(--maroon);
+  color: var(--cream);
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: var(--maroon-dark);
+}
+
+/* Header halaman */
+.page-head {
+  padding: 56px 0 32px;
+}
+.page-head .eyebrow {
+  font-size: 0.7rem;
+  color: var(--maroon);
+  margin-bottom: 8px;
+}
+.page-head h1 {
+  font-size: 2.4rem;
+}
+.page-head p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Hero */
+.hero {
+  background: var(--sand);
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding-block: 64px;
+}
+.hero .eyebrow {
+  font-size: 0.75rem;
+  color: var(--maroon);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 24px;
+}
+.hero small {
+  display: block;
+  margin-top: 56px;
+  font-size: 0.85rem;
+  color: var(--maroon);
+}
+.photo {
+  background: var(--sand);
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Kartu menu */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.menu-card .photo {
+  aspect-ratio: 3/2;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+.menu-card h3 {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 400;
+}
+.menu-card .price {
+  font-size: 0.85rem;
+  color: var(--maroon);
+}
+.section {
+  padding: 56px 0;
+}
+.section h2 {
+  font-size: 1.9rem;
+}
+.section .sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 4px 0 28px;
+}
+.menu-card.hide {
+  display: none;
+}
+
+/* Tentang */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 72px;
+}
+.about .photo {
+  aspect-ratio: 4/3;
+}
+.about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.about p {
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+.about h3 {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+/* Menu: filter */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.chip {
+  border: 0;
+  background: var(--sand);
+  color: var(--maroon);
+  padding: 7px 18px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.chip.active {
+  background: var(--maroon);
+  color: var(--cream);
+}
+.group-title {
+  font-size: 1.3rem;
+  margin: 40px 0 20px;
+}
+
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-bottom: 72px;
+}
+.gallery .photo {
+  aspect-ratio: 4/3;
+}
+
+/* Lokasi */
+.loc {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.map {
+  border: 2px solid var(--maroon);
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--tint);
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.info dt {
+  font-family: var(--serif);
+  color: var(--maroon);
+  font-weight: 700;
+  margin-top: 18px;
+}
+.info dt:first-child {
+  margin-top: 0;
+}
+.info dd {
+  font-size: 0.9rem;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.info .btn {
+  margin-top: 20px;
+}
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.social-card {
+  border: 1px solid var(--maroon);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 150px;
+}
+.social-card h3 {
+  font-size: 1.2rem;
+}
+.social-card span {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: auto;
+}
+.social-card .btn {
+  align-self: flex-start;
+  padding: 6px 18px;
+  font-size: 0.75rem;
+  margin-top: 16px;
+}
+
+/* Footer */
+.footer {
+  background: var(--maroon);
+  color: var(--sand);
+  margin-top: 40px;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 28px;
+  flex-wrap: wrap;
+}
+.footer .logo {
+  color: var(--sand);
+  font-size: 1.3rem;
+  display: block;
+}
+.footer small {
+  font-size: 0.65rem;
+  opacity: 0.8;
+}
+.footer nav {
+  display: flex;
+  gap: 18px;
+  font-size: 0.75rem;
+}
+.footer nav a:hover {
+  text-decoration: underline;
+}
+.footer .icons {
+  display: flex;
+  gap: 12px;
+}
+.footer .icons svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--sand);
+}
+
+/* Responsif */
+@media (max-width: 860px) {
+  .hero .container,
+  .about,
+  .loc {
+    grid-template-columns: 1fr;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery,
+  .socials {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 2px solid var(--maroon);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    display: block;
+    padding: 12px 4%;
+  }
+}
+@media (max-width: 520px) {
+  .gallery,
+  .socials {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== Tambahan: placeholder saat foto belum ada ===== */
+.photo {
+  position: relative;
+}
+.photo.no-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.photo.no-img::after {
+  content: attr(data-label);
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
