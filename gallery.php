@@ -11,6 +11,9 @@ $foto = [
     ['galeri-4.jpg', 'Minuman segar'],
     ['galeri-5.jpg', 'Permainan di cafe'],
     ['galeri-6.jpg', 'Suasana malam'],
+    ['galeri-7.jpg', 'Suasana santai'],
+    ['galeri-8.jpg', 'Suasana malam'],
+    ['galeri-9.jpg', 'Suasana malam'],
 ];
 include __DIR__ . '/includes/header.php';
 ?>
