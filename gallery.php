@@ -3,7 +3,7 @@
 require __DIR__ . '/includes/bootstrap.php';
 
 $title   = 'Galeri';
-$scripts = ['gallery'];
+$scripts = [];
 
 // Mengambil data foto dari database CozyHouse
 $foto = [];
