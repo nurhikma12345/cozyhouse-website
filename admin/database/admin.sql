@@ -1,10 +1,10 @@
 -- ============================================================
 -- CozyHouse Admin — tabel akun admin
--- Jalankan SEKALI di database cozyhouse_db (phpMyAdmin / HeidiSQL).
+-- Jalankan SEKALI di database cozyhouse (phpMyAdmin / HeidiSQL).
 -- Login awal  : username "admin"  |  password "admin123"
 -- WAJIB diganti lewat menu "Akun Saya" setelah login pertama.
 -- ============================================================
-USE `cozyhouse_db`;
+USE `cozyhouse`;
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `id_admin`      int NOT NULL AUTO_INCREMENT,

@@ -7,7 +7,7 @@ dan menyimpan foto ke `assets/images/` supaya langsung tampil di website.
 ## Cara pasang
 
 1. Salin folder `admin/` ke dalam `CozyHouse/` (sejajar dengan `index.php`).
-2. Impor `admin/database/admin.sql` ke database `cozyhouse_db` (membuat tabel `admin`).
+2. Impor `admin/database/admin.sql` ke database `cozyhouse` (membuat tabel `admin`).
 3. Buka `http://localhost/CozyHouse/admin/`
 4. Login awal: **admin** / **admin123** — segera ganti username dan password di menu **Akun Saya**.
 
