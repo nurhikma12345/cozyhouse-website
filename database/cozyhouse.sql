@@ -16,8 +16,24 @@
 
 
 -- Membuang struktur basisdata untuk cozyhouse_db
+DROP DATABASE IF EXISTS `cozyhouse_db`;
 CREATE DATABASE IF NOT EXISTS `cozyhouse_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `cozyhouse_db`;
+
+-- membuang struktur untuk table cozyhouse_db.admin
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id_admin` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `nama_lengkap` varchar(100) NOT NULL,
+  `dibuat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_admin`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Membuang data untuk tabel cozyhouse_db.admin: ~1 rows (lebih kurang)
+INSERT INTO `admin` (`id_admin`, `username`, `password_hash`, `nama_lengkap`, `dibuat`) VALUES
+	(1, 'admin', '$2y$10$mfBDMJbJelQaZnFNP.oH8uf68/S1z9SuLx.Lhq7BUj4t6.agWqERC', 'Administrator', '2026-11-02 06:56:23');
 
 -- membuang struktur untuk table cozyhouse_db.galeri
 CREATE TABLE IF NOT EXISTS `galeri` (
@@ -27,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `galeri` (
   `gambar` varchar(255) NOT NULL,
   `deskripsi` text,
   PRIMARY KEY (`id_galeri`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Membuang data untuk tabel cozyhouse_db.galeri: ~9 rows (lebih kurang)
 INSERT INTO `galeri` (`id_galeri`, `judul_foto`, `kategori`, `gambar`, `deskripsi`) VALUES
-	(1, 'Pengunjung CozyHouse', 'Suasana Cafe', 'galeri-1.jpg', 'Suasana pengunjung di CozyHouse.'),
+	(1, 'Foto Pengujian CozyHouse', 'Suasana Cafe', 'galeri-1.jpg', 'Suasana pengunjung di CozyHouse.'),
 	(2, 'Sudut dekorasi cafe', 'Dekorasi', 'galeri-2.jpg', 'Sudut dekorasi cafe CozyHouse.'),
 	(3, 'Area santai', 'Suasana Cafe', 'galeri-3.jpg', 'Area santai untuk pengunjung.'),
 	(4, 'Minuman segar', 'Menu', 'galeri-4.jpg', 'Pilihan minuman segar CozyHouse.'),
@@ -72,11 +88,11 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Membuang data untuk tabel cozyhouse_db.menu: ~32 rows (lebih kurang)
 INSERT INTO `menu` (`id_menu`, `id_kategori`, `nama_menu`, `deskripsi`, `harga`, `gambar`, `favorit`) VALUES
 	(98, 3, 'Nasi Ayam Goreng', NULL, 20000.00, 'nasi-ayam-goreng.jpg', 1),
-	(99, 2, 'Ice Chocolate', NULL, 16000.00, 'Chocolate.png', 1),
+	(99, 2, 'Ice Chocolate', NULL, 20000.00, 'Chocolate.png', 1),
 	(100, 2, 'Greentea', NULL, 16000.00, 'Greentea.png', 0),
 	(101, 2, 'Cream & Cookies', NULL, 16000.00, 'Cream Cookies.png', 0),
 	(102, 2, 'Calamansy', NULL, 15000.00, 'Calamansy.png', 0),
-	(103, 1, 'Americano', NULL, 15000.00, 'Americano.png', 0),
+	(103, 1, 'Americano', NULL, 18000.00, 'Americano.png', 0),
 	(104, 1, 'ButterScotch', NULL, 17000.00, 'ButterScotch.png', 0),
 	(105, 1, 'Cappucino', NULL, 17000.00, 'Cappucino.png', 0),
 	(106, 2, 'OceanBlue', NULL, 15000.00, 'OceanBlue.jpeg', 1),
@@ -102,7 +118,7 @@ INSERT INTO `menu` (`id_menu`, `id_kategori`, `nama_menu`, `deskripsi`, `harga`,
 	(126, 4, 'Cheese Cake Coklat Milo', NULL, 28000.00, 'cheesecake coklat milo.png', 1),
 	(127, 4, 'Cheese Cake Milo', NULL, 28000.00, 'cheesecake milo.png', 1),
 	(128, 4, 'Cheese Cake Cookies &', NULL, 28000.00, 'cheesecake cookies&cream.png', 1),
-	(129, 1, 'Aren Coffe', NULL, 15000.00, 'aren coffe.png', 0);
+	(129, 1, 'Aren Coffe', NULL, 20000.00, 'aren coffe.png', 0);
 
 -- membuang struktur untuk table cozyhouse_db.profil_cafe
 CREATE TABLE IF NOT EXISTS `profil_cafe` (
@@ -115,12 +131,13 @@ CREATE TABLE IF NOT EXISTS `profil_cafe` (
   `instagram` varchar(100) DEFAULT NULL,
   `telepon` varchar(20) DEFAULT NULL,
   `gambar_hero` varchar(255) DEFAULT NULL,
+  `gambar_tentang` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_profil`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Membuang data untuk tabel cozyhouse_db.profil_cafe: ~1 rows (lebih kurang)
-INSERT INTO `profil_cafe` (`id_profil`, `nama_cafe`, `deskripsi`, `alamat`, `jam_operasional`, `whatsapp`, `instagram`, `telepon`, `gambar_hero`) VALUES
-	(1, 'Cafe CozyHouse', 'Tempat nyaman untuk menikmati waktu bersama.', 'Binturu, Kota Palopo, Sulawesi Selatan', 'Hubungi cafe untuk informasi jam operasional', '', '', '', 'hero.jpg');
+INSERT INTO `profil_cafe` (`id_profil`, `nama_cafe`, `deskripsi`, `alamat`, `jam_operasional`, `whatsapp`, `instagram`, `telepon`, `gambar_hero`, `gambar_tentang`) VALUES
+	(1, 'Cafe CozyHouse', 'Tempat nyaman untuk menikmati waktu bersama.', 'Binturu, Kota Palopo, Sulawesi Selatan', 'Hubungi cafe untuk informasi jam operasional', '', '', '', 'hero.jpg', 'tentang.jpg');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
